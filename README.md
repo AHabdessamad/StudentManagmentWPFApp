@@ -1,3 +1,3 @@
 # StudentManagmentWPFApp
 
-# This is solution applications that we build for students management for schools
+# This is a solution application that we build for students management for schools using .Net WPF
