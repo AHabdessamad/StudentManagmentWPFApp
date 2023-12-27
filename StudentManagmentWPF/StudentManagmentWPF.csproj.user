@@ -7,7 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\FieldUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Statistic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\StudentUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\FieldUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Statistic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\StudentUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserUI.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

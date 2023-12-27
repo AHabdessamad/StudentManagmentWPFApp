@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\App.xaml
-11407045341
+7-75222712
 
-6-2039456775
+23-861730027
 198-688555687
-MainWindow.xaml;
+MainWindow.xaml;View\FieldUI.xaml;View\Home.xaml;View\Login.xaml;View\Statistic.xaml;View\StudentUI.xaml;View\UserUI.xaml;
 
 False
 
