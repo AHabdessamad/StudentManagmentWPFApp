@@ -5,8 +5,60 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StudentManagmentWPF.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="450" d:DesignWidth="532"
+             xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel"
+             Style="{StaticResource Page_Style}"
+         >
+    <UserControl.DataContext>
+        <vm:HomeVM />
+    </UserControl.DataContext>
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Bonjour " Foreground="#FFFFFF" FontSize="20" FontWeight="SemiBold"  />
+            <TextBlock Text="Full Name{Binding FullName}" Foreground="#FFFFFF" FontSize="20" FontWeight="SemiBold" />
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Etudiants Tab" Foreground="#FFFFFF" FontSize="15" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock Foreground="#ffffff" FontSize="12" Grid.Row="1" Text="L'onglet Étudiant simplifie la gestion des informations des élèves. Ajoutez, modifiez ou supprimez des entrées facilement pour une administration efficace." TextWrapping="Wrap" Width="532" HorizontalAlignment="Left" />
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Utilisateurs Tab" Foreground="#FFFFFF" FontSize="15" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock Foreground="#ffffff" FontSize="12" Grid.Row="1" Text="Gérez facilement les enseignants : ajoutez, modifiez ou supprimez des entrées en toute simplicité grâce à l'onglet Enseignant." TextWrapping="Wrap" Width="532" HorizontalAlignment="Left"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Filières Tab" Foreground="#FFFFFF" FontSize="15" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock Foreground="#ffffff" FontSize="12" Grid.Row="1" Text="L'onglet Filière offre une interface pratique pour la gestion des filières académiques" TextWrapping="Wrap" Width="532" HorizontalAlignment="Left"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Statistiques Tab" Foreground="#FFFFFF" FontSize="15" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock Foreground="#ffffff" FontSize="12" Grid.Row="1" Text="L'onglet Statistique fournit des graphiques interactifs pour une vision claire des performances des étudiants. Comparez, analysez et suivez l'évolution temporelle pour des décisions éducatives informées." TextWrapping="Wrap" Width="532" HorizontalAlignment="Left"/>
+        </Grid>
     </Grid>
 </UserControl>

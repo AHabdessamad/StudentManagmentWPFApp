@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel"
+                    xmlns:view="clr-namespace:StudentManagmentWPF.View">
+    <DataTemplate DataType="{x:Type vm:HomeVM}">
+        <view:Home />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:StudentVM}">
+        <view:StudentUI />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:UserVM}">
+        <view:UserUI />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:FieldVM}">
+        <view:FieldUI />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:StatisticVM}">
+        <view:Statistic />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:LoginVM}">
+        <view:Login />
+    </DataTemplate>
+    
+</ResourceDictionary>
