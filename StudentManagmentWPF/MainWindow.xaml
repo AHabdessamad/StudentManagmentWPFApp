@@ -75,7 +75,7 @@
 
                     <!--// User //-->
 
-                    <Menu:Btn Visibility="{}"  Style="{StaticResource BtnStyle}"
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
                               Command="{Binding UserCommand}">
 
                         <Grid>
