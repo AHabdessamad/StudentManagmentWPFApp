@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StudentManagmentWPF.Model
 {
-    class Field
+    public class Field
     {
         public int Id { get; set; }
         public string Nom { get; set; }

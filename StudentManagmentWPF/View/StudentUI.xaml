@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StudentManagmentWPF.View"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
                       xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel"
@@ -13,9 +14,37 @@
         <vm:StudentVM />
     </UserControl.DataContext>
     <Grid>
-        <Border Background="AliceBlue" />
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Student Page" FontSize="30" />
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock 
+                Text="Selectionner Par Filières:" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Left" 
+                FontSize="20" 
+                FontWeight="SemiBold" 
+                Foreground="#FFFFFF" 
+                />
+            <telerik:RadComboBox SelectedItem="{Binding SelectedField, Mode=TwoWay}"
+                                 Grid.Row="1" 
+                                 VerticalAlignment="Top" 
+                                 Width="500" Height="20" 
+                                 ItemsSource="{Binding Fields}" 
+                                 DisplayMemberPath="Nom"
+                                  />
         </Grid>
+        <telerik:RadGridView 
+            Grid.Row="1" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Bottom" 
+            Margin="0, 0, 0, 70" 
+            ItemsSource="{Binding Students}" 
+            />
     </Grid>
 </UserControl>

@@ -8,22 +8,21 @@ using System.Threading.Tasks;
 
 namespace StudentManagmentWPF.Model
 {
-    enum Gender
+    public enum Gender
     {
         Homme,
         Femme
     }
-    class Student
+    public class Student
     {
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public Gender Sexe { get; set; }
         public DateOnly DateNaissance { get; set; }
-        [Required]
         public string Cne { get; set; }
-        [Column(TypeName = "LongBlob")]
-        public byte[]? Image { get; set; }
+        public byte[]? ImageProfile { get; set; }
+        public virtual Field Field { get; set; }
 
     }
 }

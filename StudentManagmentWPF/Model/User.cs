@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StudentManagmentWPF.Model
 {
-    class User
+    public class User
     {
         public int Id { get; set; }
         public string Nom { get; set; }
@@ -16,7 +16,6 @@ namespace StudentManagmentWPF.Model
         public Gender Sexe { get; set; }
         public DateOnly DateNaissance { get; set; }
         public bool IsAdmin { get; set; }
-        [Column(TypeName = "LongBlob")]
-        public byte[]? Image { get; set; }
+        public byte[]? ImageProfile { get; set; }
     }
 }
