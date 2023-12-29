@@ -54,7 +54,7 @@ namespace StudentManagmentWPF.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StudentManagmentWPF;component/view/statistic.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StudentManagmentWPF;V1.0.0.0;component/view/statistic.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\Statistic.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

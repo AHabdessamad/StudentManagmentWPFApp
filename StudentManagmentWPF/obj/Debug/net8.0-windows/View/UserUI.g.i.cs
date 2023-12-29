@@ -54,7 +54,7 @@ namespace StudentManagmentWPF.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StudentManagmentWPF;component/view/userui.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StudentManagmentWPF;V1.0.0.0;component/view/userui.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\UserUI.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

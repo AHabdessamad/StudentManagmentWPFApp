@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\LAMARTI Mohammed\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\LAMARTI Mohammed\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+      "C:\\Users\\aobbo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\aobbo\\.nuget\\packages",
       "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
     ],
     "configProperties": {

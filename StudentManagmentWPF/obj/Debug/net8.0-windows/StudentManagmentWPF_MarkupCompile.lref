@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 FC:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\App.xaml;;
 FC:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\MainWindow.xaml;;
@@ -10,4 +11,16 @@ FC:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentW
 FC:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\Statistic.xaml;;
 FC:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\StudentUI.xaml;;
 FC:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\UserUI.xaml;;
+=======
+﻿C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\App.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\LoginWindow.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\MainWindow.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Utilities\DataTemplate.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\FieldUI.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\Home.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\Statistic.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\StudentUI.xaml;;
+FC:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\View\UserUI.xaml;;
+>>>>>>> b5557fddc291602a4d99e4cac2d258f3aa9d22da
 
