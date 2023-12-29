@@ -20,8 +20,10 @@ namespace StudentManagmentWPF
     public partial class MainWindow : Window
     {
         readonly SchoolDbContext _db;
-        public MainWindow()
+        public int _userId;
+        public MainWindow(int id)
         {
+            this._userId = id;
             _db = new SchoolDbContext();
             List<Student> students = _db.Students.ToList<Student>();
             InitializeComponent();

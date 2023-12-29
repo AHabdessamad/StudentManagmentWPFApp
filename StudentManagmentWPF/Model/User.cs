@@ -13,6 +13,8 @@ namespace StudentManagmentWPF.Model
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public Gender Sexe { get; set; }
         public DateOnly DateNaissance { get; set; }
         public bool IsAdmin { get; set; }

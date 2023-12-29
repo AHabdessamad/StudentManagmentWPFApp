@@ -104,11 +104,11 @@
     </Style>
 
     <ImageBrush x:Key="close_app_def"
-                ImageSource="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_def.png"
+                ImageSource="C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_def.png"
                 Stretch="None" />
 
     <ImageBrush x:Key="close_app_mo"
-                ImageSource="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_mo.png"
+                ImageSource="C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_mo.png"
                 Stretch="None" />
 
     <Style x:Key="ExitApp"

@@ -17,8 +17,5 @@
     <DataTemplate DataType="{x:Type vm:StatisticVM}">
         <view:Statistic />
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:LoginVM}">
-        <view:Login />
-    </DataTemplate>
     
 </ResourceDictionary>
