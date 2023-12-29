@@ -5,11 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentManagmentWPF"
         mc:Ignorable="d"
-<<<<<<< HEAD
         Title="MainWindow" Height="500" Width="1000"
-=======
-        Title="MainWindow" Height="800" Width="800"
->>>>>>> b5557fddc291602a4d99e4cac2d258f3aa9d22da
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
@@ -50,7 +46,7 @@
 
                         <Grid>
 
-                            <Image Source="C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_home.png"
+                            <Image Source="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_home.png"
                                    Style="{StaticResource Image_Style}" />
 
                             <TextBlock Text="Home"
@@ -67,7 +63,7 @@
 
                         <Grid>
 
-                            <Image Source="C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_customer.png"
+                            <Image Source="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_customer.png"
                                    Style="{StaticResource Image_Style}" />
 
                             <TextBlock Text="Students"
@@ -84,7 +80,7 @@
 
                         <Grid>
 
-                            <Image Source="C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_product.png"
+                            <Image Source="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_product.png"
                                    Style="{StaticResource Image_Style}" />
 
                             <TextBlock Text="Users"
@@ -101,7 +97,7 @@
 
                         <Grid>
 
-                            <Image Source="C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_order.png"
+                            <Image Source="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_order.png"
                                    Style="{StaticResource Image_Style}" />
 
                             <TextBlock Text="Fields"
@@ -116,7 +112,7 @@
 
                         <Grid>
 
-                            <Image Source="C:\Users\aobbo\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_transaction.png"
+                            <Image Source="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\img_transaction.png"
                                    Style="{StaticResource Image_Style}" />
 
                             <TextBlock Text="Statistics"

@@ -7,16 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Update="View\AddStudentUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\EditStudentUI.xaml.cs">
-=======
-    <Compile Update="LoginWindow.xaml.cs">
->>>>>>> b5557fddc291602a4d99e4cac2d258f3aa9d22da
-      <SubType>Code</SubType>
-    </Compile>
+	<Compile Update="View\EditStudentUI.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
+	<Compile Update="LoginWindow.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
     <Compile Update="View\FieldUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

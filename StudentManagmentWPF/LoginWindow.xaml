@@ -77,7 +77,7 @@
                         Grid.Row="1"
                         Orientation="Vertical"
                         Margin="0,35,0,0">
-                <Image Source="C:\Users\aobbo\source\repos\loginApp\Images\Logo.png"
+                <Image Source="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\Logo.png"
                         Width="100" Height="100"/>
                 <TextBlock Text="Weclome!"
                             Foreground="White"
@@ -114,7 +114,7 @@
                      Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}">
                     <!-- -->
                     <TextBox.Background>
-                        <ImageBrush ImageSource="C:\Users\aobbo\source\repos\loginApp\Images\user-icon.png"
+                        <ImageBrush ImageSource="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\user-icon.png"
                                     Stretch="None"
                                     AlignmentX="Left"/>
                     </TextBox.Background>
@@ -141,7 +141,7 @@
                          PasswordChanged="txtPassword_PasswordChanged">
                     <!-- -->
                     <PasswordBox.Background>
-                        <ImageBrush ImageSource="C:\Users\aobbo\source\repos\loginApp\Images\key-icon.png"
+                        <ImageBrush ImageSource="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\key-icon.png"
                                     Stretch="None"
                                     AlignmentX="Left"/>
                     </PasswordBox.Background>
