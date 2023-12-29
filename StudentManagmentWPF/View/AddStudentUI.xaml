@@ -1,0 +1,53 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudentManagmentWPF.View"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="StudentManagmentWPF.View.AddStudentUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel"
+             Style="{StaticResource Page_Style}"
+             >
+    <UserControl.DataContext>
+        <vm:AddStudentVM />
+    </UserControl.DataContext>
+    <Grid Background="#212529">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBox Text="{Binding Nom}"  x:Name="nomC" Width="200" Height="40" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <TextBox Text="{Binding Prenom}" x:Name="prenomC" Width="200" Height="40" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <RadioButton IsChecked="{Binding SexeH}" x:Name="sexeHC" Grid.Column="1" Content="Homme" Foreground="#FFFFFF" FontSize="16" HorizontalAlignment="Left" Margin="10,14,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <RadioButton IsChecked="{Binding SexeF}" x:Name="sexeFC" Grid.Column="1" Content="Femme" Foreground="#FFFFFF" FontSize="16" HorizontalAlignment="Center" Margin="0,14,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Cne}" x:Name="cneC" Grid.Column="1" Width="200" Height="40"  Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <Button Content="Choose an Image" Command="{Binding chooseImageCommand}" x:Name="imgC" Width="200" Height="40" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Center" />
+        <telerik:RadComboBox x:Name="filiereC" ItemsSource="{Binding Fields}" DisplayMemberPath="Nom" SelectedItem="{Binding Field, Mode=TwoWay}" Width="200" Height="40" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+        <DatePicker Text="{Binding DateNaissance, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="dateC" Width="200" Height="40" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Center"/>
+        <telerik:Label Content="Nom: " Foreground="#ffffff" FontSize="20" FontWeight ="SemiBold" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+        <telerik:Label Content="Prènom: " Foreground="#ffffff" FontSize="20" FontWeight ="SemiBold" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+        <telerik:Label Content="Sexe: " Foreground="#ffffff" FontSize="20" FontWeight ="SemiBold" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"/>
+        <telerik:Label Content="Date de Naissance: " Foreground="#ffffff" FontSize="20" FontWeight ="SemiBold" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
+        <telerik:Label Content="CNE: " Foreground="#ffffff" FontSize="20" FontWeight ="SemiBold" HorizontalAlignment="Center"  Grid.Row="5" VerticalAlignment="Center"/>
+        <telerik:Label Content="Image de l'étudiant(e): " Foreground="#ffffff" FontSize="20" FontWeight ="SemiBold" HorizontalAlignment="Center"  Grid.Row="6" VerticalAlignment="Center"/>
+        <telerik:Label Content="Filière: " HorizontalAlignment="Center" Foreground="#ffffff" FontSize="20" FontWeight ="SemiBold"  Grid.Row="7" VerticalAlignment="Center"/>
+        <TextBlock Foreground="#ffffff" FontWeight="Bold" Grid.Column="0" Grid.ColumnSpan="2" Text="Ajouter Un Etudiant" FontSize="20" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <telerik:RadButton Command="{Binding AddStudentCommand}" Content="Ajouter" Foreground="#ffffff" Background="#337aea" BorderThickness="0" Padding="20, 10, 20, 10"  HorizontalAlignment="Center" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" FontSize="16"/>
+        <telerik:RadButton Command="{Binding CancelStudentCommand}" Content="Annuler" Foreground="#ffffff" Background="#Ea3346" BorderThickness="0" Padding="20, 10, 20, 10"  HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" FontSize="16"/>
+        <ContentControl  Content="{Binding CurrentView}" Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="2" />
+    </Grid>
+</UserControl>

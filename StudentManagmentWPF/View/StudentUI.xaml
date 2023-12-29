@@ -3,48 +3,112 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel"
              xmlns:local="clr-namespace:StudentManagmentWPF.View"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-                      xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel"
          Style="{StaticResource Page_Style}"
          >
     <UserControl.DataContext>
         <vm:StudentVM />
     </UserControl.DataContext>
-    <Grid>
+    <Grid Background="#212529">
         <Grid.RowDefinitions>
             <RowDefinition />
+            <RowDefinition Height="4*" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <TextBlock 
-                Text="Selectionner Par Filières:" 
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Left" 
-                FontSize="20" 
-                FontWeight="SemiBold" 
-                Foreground="#FFFFFF" 
-                />
-            <telerik:RadComboBox SelectedItem="{Binding SelectedField, Mode=TwoWay}"
-                                 Grid.Row="1" 
-                                 VerticalAlignment="Top" 
-                                 Width="500" Height="20" 
-                                 ItemsSource="{Binding Fields}" 
-                                 DisplayMemberPath="Nom"
-                                  />
+        
+
+        <Grid HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock 
+                    Text="Selectionner Par Filières:" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Left" 
+                    FontSize="20" 
+                    FontWeight="SemiBold" 
+                    Foreground="#FFFFFF" 
+                    />
+                <telerik:RadComboBox SelectedItem="{Binding SelectedField, Mode=TwoWay}"
+                                     Grid.Row="1" 
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Top" 
+                                     Width="300" Height="20" 
+                                     ItemsSource="{Binding Fields}" 
+                                     DisplayMemberPath="Nom"
+                                      />
+            </Grid>
+            <TextBlock Grid.Column="1" Text="{Binding Responsable}" Foreground="#FFFFFF" />
         </Grid>
         <telerik:RadGridView 
+            SelectedItem="{Binding SelectedItem}"
             Grid.Row="1" 
             HorizontalAlignment="Center" 
-            VerticalAlignment="Bottom" 
-            Margin="0, 0, 0, 70" 
-            ItemsSource="{Binding Students}" 
-            />
+            VerticalAlignment="Center" 
+            ItemsSource="{Binding Students}"
+            AutoGenerateColumns="False"
+            >
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Nom}" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Prenom}" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Cne}" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Sexe}" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding DateNaissance}" />
+                <telerik:GridViewImageColumn DataMemberBinding="{Binding ImageProfile}" ImageStretch="Fill" ImageWidth="50" ImageHeight="50" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Field.Nom}" />
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <Grid Grid.Row="2" Margin="30, 20, 30, 20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <telerik:RadButton x:Name="radButton"  
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Padding="20, 10, 20, 10"
+                    Background="#3299ba"
+                    Foreground="#FFFFFF"
+                    FontWeight="SemiBold"
+                    BorderThickness="0"
+                    Command="{Binding AddStudentCommand}"
+                    Content="Ajouter Un Etudiant" />
+
+
+            <telerik:RadButton 
+                    Grid.Column="1"
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Padding="20, 10, 20, 10"
+                        Background="#ffc86e"
+                        Foreground="#FFFFFF"
+                        FontWeight="SemiBold"
+                        BorderThickness="0"
+                        Command="{Binding ModifyStudentCommand}"
+                    Content="Modifier Un Etudiant" />
+            <telerik:RadButton 
+                Grid.Column="2"
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Padding="20, 10, 20, 10"
+                        Background="#Ea3335"
+                        Foreground="#FFFFFF"
+                        FontWeight="SemiBold"
+                        BorderThickness="0"
+                        Command="{Binding deleteStudentCommand}"
+                    Content="Supprimer Un Etudiant" />
+        </Grid>
+        <ContentControl  Content="{Binding CurrentView}" Grid.Row="0" Grid.RowSpan="3" />
     </Grid>
 </UserControl>

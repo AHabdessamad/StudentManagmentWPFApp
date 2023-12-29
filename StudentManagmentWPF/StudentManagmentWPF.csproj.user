@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\AddStudentUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditStudentUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\FieldUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +49,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Utilities\DataTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddStudentUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditStudentUI.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\FieldUI.xaml">
