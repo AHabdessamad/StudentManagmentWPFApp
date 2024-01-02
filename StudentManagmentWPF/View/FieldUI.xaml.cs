@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using StudentManagmentWPF.Model;
+using StudentManagmentWPF.ViewModel;
 
 namespace StudentManagmentWPF.View
 {
@@ -23,6 +25,46 @@ namespace StudentManagmentWPF.View
         public FieldUI()
         {
             InitializeComponent();
+            //if (DataContext is FieldVM fieldVM)
+            //{
+            //    txtId.Text = fieldVM.Fields.Count + "";
+            //}
         }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Field obj = new Field();
+            obj.Nom = txtName.Text.ToString();
+            obj.Responsable = txtResponsable.Text.ToString();
+            if (DataContext is FieldVM fieldVM)
+            {
+                fieldVM.AddElemet(obj);
+            }
+        }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is FieldVM fieldVM)
+            {
+                fieldVM.deleteSelectedItem();
+            }
+        }
+
+        private void TopContainerChanged(object sender, RoutedEventArgs e)
+        {
+            if(fieldCarousel.SelectedItem!=null && fieldCarousel.SelectedItem.GetType() == typeof(Field) && DataContext is FieldVM fieldVM)
+            {
+                Field obj = (Field)fieldCarousel.SelectedItem;
+                fieldVM.Obj = obj;
+            }
+        }        
+        private void IsAnimatingchanged(object sender, RoutedEventArgs e)
+        { }
+
     }
 }

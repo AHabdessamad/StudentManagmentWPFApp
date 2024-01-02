@@ -40,7 +40,7 @@ namespace StudentManagmentWPF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Fields");
+                    b.ToTable("Fields", (string)null);
                 });
 
             modelBuilder.Entity("StudentManagmentWPF.Model.Student", b =>
@@ -79,7 +79,7 @@ namespace StudentManagmentWPF.Migrations
 
                     b.HasIndex("FieldId");
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
                 });
 
             modelBuilder.Entity("StudentManagmentWPF.Model.User", b =>
@@ -120,7 +120,7 @@ namespace StudentManagmentWPF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("StudentManagmentWPF.Model.Student", b =>

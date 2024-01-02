@@ -6,16 +6,267 @@
              xmlns:local="clr-namespace:StudentManagmentWPF.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel"
-             Style="{StaticResource Page_Style}"
-             >
+             xmlns:vm="clr-namespace:StudentManagmentWPF.ViewModel" xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Navigation"
+             Style="{StaticResource Page_Style}">
+
     <UserControl.DataContext>
         <vm:FieldVM />
     </UserControl.DataContext>
-    <Grid>
-        <Border Background="AliceBlue" />
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Field Page" FontSize="30" />
-        </Grid>
+
+    <UserControl.Resources>
+        <Style TargetType="{x:Type telerik:CarouselItem}">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template" >
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type telerik:CarouselItem}">
+                        <Border>
+                            <Border x:Name="CarouselItemMainBorder" 
+                                     ClipToBounds="False" Height="170" Width="200" RenderTransformOrigin="0.5, 1"
+                                    Margin="0,0,0,40"
+                                    BorderBrush="#FF91B3FF" BorderThickness="1" CornerRadius="5,5,5,5" SnapsToDevicePixels="True">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="108,472" StartPoint="108,23" MappingMode="Absolute">
+                                        <GradientStop Color="#FF2C3A68" Offset="0"/>
+                                        <GradientStop Color="#FF000000" Offset="0.5"/>
+                                        <GradientStop Color="#FF0F224C" Offset="0.045"/>
+                                        <GradientStop Color="#FF000000" Offset="0.0451"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border Opacity="1" BorderBrush="#3F000000" 
+                                        BorderThickness="0" 
+                                        CornerRadius="5,5,5,5" 
+                                        Margin="10,10,10,10" 
+                                        x:Name="CarouselItemInnerBorder" 
+                                        SnapsToDevicePixels="True">
+                                    <Border.Background>
+                                        <LinearGradientBrush EndPoint="101,462" StartPoint="101,13" MappingMode="Absolute">
+                                            <GradientStop Color="#FF2C3A68" Offset="0"/>
+                                            <GradientStop Color="#FF000000" Offset="1"/>
+                                            <GradientStop Color="#FF0F224C" Offset="0.045"/>
+                                            <GradientStop Color="#FF000000" Offset="0.0451"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <ContentPresenter IsHitTestVisible="True" />
+                                </Border>
+                            </Border>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True" >
+                                <Setter TargetName="CarouselItemMainBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="108,472" StartPoint="108,23" MappingMode="Absolute">
+                                            <GradientStop Color="#FF344B97" Offset="0"/>
+                                            <GradientStop Color="#FF000000" Offset="1"/>
+                                            <GradientStop Color="#FF233F7E" Offset="0.045"/>
+                                            <GradientStop Color="#FF000000" Offset="0.0451"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="CarouselItemInnerBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush  EndPoint="101,462" StartPoint="101,13" MappingMode="Absolute">
+                                            <GradientStop Color="#FF344B97" Offset="0"/>
+                                            <GradientStop Color="#FF000000" Offset="1"/>
+                                            <GradientStop Color="#FF233F7E" Offset="0.045"/>
+                                            <GradientStop Color="#FF000000" Offset="0.0451"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="Transparent">
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadCarousel x:Name="fieldCarousel"  
+                             HorizontalAlignment="Stretch" 
+                             HorizontalScrollBarVisibility="Hidden" 
+                             Background="Transparent" 
+                             Grid.Row="0" 
+                             ItemsSource="{Binding Fields}">
+            <telerik:RadCarousel.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <telerik:RadCarouselPanel 
+                        SelectedIsTopItem="TopContainerChanged"
+                        ItemsPerPage="{Binding Path=DataContext.ItemsPerPage, RelativeSource={RelativeSource AncestorType={x:Type local:FieldUI}}, Mode=TwoWay}"
+                        TopContainerChanged="TopContainerChanged" 
+                        />
+                </ItemsPanelTemplate>
+            </telerik:RadCarousel.ItemsPanel>
+        </telerik:RadCarousel>
+
+        <Border Grid.Row="1" Background="#A367B1" BorderBrush="#FF000000" Width="300" Height="210" BorderThickness="1" CornerRadius="10" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Id"
+                               Foreground="Black"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               Margin="10,5,0,0"/>
+                    <TextBox x:Name="txtId"
+                            FontSize="13"
+                             IsEnabled="False"
+                            FontWeight="Medium"
+                            FontFamily="Montserrat"                            
+                            Foreground="Black"
+                            Text="{Binding Path=Obj.Id, Mode=TwoWay}"
+                            CaretBrush="LightGray"
+                            BorderBrush="DarkGray"
+                            BorderThickness="0,0,0,2"
+                            Height="28"
+                            VerticalContentAlignment="Center"
+                            Margin="10,5,10,0"
+                            Padding="4,0,0,0" />
+                    <TextBlock Text="Nom De Filiere"
+                               Foreground="Black"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               Margin="10,5,0,0"/>
+                    <TextBox x:Name="txtName"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            FontFamily="Montserrat"                            
+                            Foreground="Black"
+                            CaretBrush="LightGray"
+                             Text="{Binding Path=Obj.Nom, Mode=TwoWay}"
+                            BorderBrush="DarkGray"
+                            BorderThickness="0,0,0,2"
+                            Height="28"
+                            VerticalContentAlignment="Center"
+                            Margin="10,5,10,0"
+                            Padding="4,0,0,0" />
+                    <TextBlock Text="Le Responsable"
+                               Foreground="Black"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               Margin="10,5,0,0"/>
+                    <TextBox x:Name="txtResponsable"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            FontFamily="Montserrat"                            
+                            Foreground="Black"
+                            CaretBrush="LightGray"
+                            BorderBrush="DarkGray"
+                             Text="{Binding Path=Obj.Responsable, Mode=TwoWay}"
+                            BorderThickness="0,0,0,2"
+                            Height="28"
+                            VerticalContentAlignment="Center"
+                            Margin="10,5,10,0"
+                            Padding="4,0,0,0" />
+                </StackPanel>
+                <Grid  Grid.Row="3" Margin="8,10,8,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="addBtn"                          
+                            BorderThickness="0"
+                            Content="Ajouter"
+                            Foreground="White"
+                            Grid.Column="0"
+                            HorizontalAlignment="Stretch"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="0,0,0,0" Click="AddBtn_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#392467"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="90" Height="30"
+                                        CornerRadius="5"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="editBtn"                          
+                            BorderThickness="0"
+                            Content="Modifier"
+                            Foreground="White"
+                            Grid.Column="1"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand" Height="30" VerticalAlignment="Top" Click="EditBtn_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#392467"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="90" Height="30"
+                    CornerRadius="5"
+                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="deleteBtn"                          
+                            BorderThickness="0"
+                            Content="supprimer"
+                            Foreground="White"
+                            Grid.Column="2"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand" Height="30" VerticalAlignment="Top" Click="DeleteBtn_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#392467"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="90" Height="30"
+                                        CornerRadius="5"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>

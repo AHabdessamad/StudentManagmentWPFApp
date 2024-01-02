@@ -21,6 +21,10 @@ namespace StudentManagmentWPF
     {
         readonly SchoolDbContext _db;
         public int _userId;
+        public MainWindow()
+        {
+
+        }
         public MainWindow(int id)
         {
             this._userId = id;

@@ -17,7 +17,7 @@ namespace StudentManagmentWPF.Data
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-7O1MGHI\SQLEXPRESS;Initial Catalog=StudentManagment;Integrated Security=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"Data Source=MTB\SQLEXPRESS;Initial Catalog=StudentManagment;Integrated Security=True;TrustServerCertificate=True");
 
 
         }

@@ -102,13 +102,15 @@
         </Setter>
 
     </Style>
+    <BitmapImage x:Key="shutdown_def" UriSource="..\Images\shutdown_def.png"></BitmapImage>
+    <BitmapImage x:Key="shutdown_mo" UriSource="..\Images\shutdown_mo.png"></BitmapImage>
 
     <ImageBrush x:Key="close_app_def"
-                ImageSource="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_def.png"
+                ImageSource="C:\Users\PC\Desktop\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_def.png"
                 Stretch="None" />
 
     <ImageBrush x:Key="close_app_mo"
-                ImageSource="C:\Users\LAMARTI Mohammed\source\repos\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_mo.png"
+                ImageSource="C:\Users\PC\Desktop\StudentManagmentWPFApp\StudentManagmentWPF\Images\shutdown_mo.png"
                 Stretch="None" />
 
     <Style x:Key="ExitApp"

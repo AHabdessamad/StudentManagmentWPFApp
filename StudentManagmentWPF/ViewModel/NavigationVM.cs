@@ -42,7 +42,7 @@ namespace StudentManagmentWPF.ViewModel
             StatisticCommand = new RelayCommand(Statistic);
 
             // Startup Page
-            _currentView = new HomeVM();
+            _currentView = new FieldVM();
         }
     }
 }

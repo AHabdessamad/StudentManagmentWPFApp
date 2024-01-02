@@ -9280,25 +9280,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LAMARTI Mohammed\\.nuget\\packages\\": {},
+    "C:\\Users\\PC\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LAMARTI Mohammed\\source\\repos\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\temp\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
       "projectName": "StudentManagmentWPF",
-      "projectPath": "C:\\Users\\LAMARTI Mohammed\\source\\repos\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
-      "packagesPath": "C:\\Users\\LAMARTI Mohammed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LAMARTI Mohammed\\source\\repos\\StudentManagmentWPFApp\\StudentManagmentWPF\\obj\\",
+      "projectPath": "C:\\Users\\PC\\Desktop\\temp\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\temp\\StudentManagmentWPFApp\\StudentManagmentWPF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\LAMARTI Mohammed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
@@ -9308,7 +9308,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
