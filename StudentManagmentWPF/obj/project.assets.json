@@ -9287,11 +9287,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\temp\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
       "projectName": "StudentManagmentWPF",
-      "projectPath": "C:\\Users\\PC\\Desktop\\temp\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
+      "projectPath": "C:\\Users\\PC\\Desktop\\StudentManagmentWPFApp\\StudentManagmentWPF\\StudentManagmentWPF.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\temp\\StudentManagmentWPFApp\\StudentManagmentWPF\\obj\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\StudentManagmentWPFApp\\StudentManagmentWPF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -44,7 +44,13 @@ namespace StudentManagmentWPF.View
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DataContext is FieldVM fieldVM)
+            {
+                Field obj = new Field();
+                obj.Nom = txtName.Text;
+                obj.Responsable = txtResponsable.Text;
+                fieldVM.EditItem(obj);
+            }
         }
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
@@ -60,7 +66,8 @@ namespace StudentManagmentWPF.View
             if(fieldCarousel.SelectedItem!=null && fieldCarousel.SelectedItem.GetType() == typeof(Field) && DataContext is FieldVM fieldVM)
             {
                 Field obj = (Field)fieldCarousel.SelectedItem;
-                fieldVM.Obj = obj;
+                Field item = new Field(obj.Id,obj.Nom,obj.Responsable);
+                fieldVM.Obj = item;
             }
         }        
         private void IsAnimatingchanged(object sender, RoutedEventArgs e)
